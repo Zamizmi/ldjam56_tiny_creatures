@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840735036c7b8464089cdf5a880d67a8, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  animalsToSpawn:
+  - {fileID: 11400000, guid: dee79de62950345c8a1a0f1238f7e931, type: 2}
+  - {fileID: 11400000, guid: 8bc51c71d3b004e5481993423eb1761d, type: 2}
+  - {fileID: 11400000, guid: 8bc51c71d3b004e5481993423eb1761d, type: 2}
+  - {fileID: 11400000, guid: dee79de62950345c8a1a0f1238f7e931, type: 2}
+  foodsToSpawn:
+  - {fileID: 11400000, guid: ad9da3b1f0b6343f8bc831306d162353, type: 2}
+  - {fileID: 11400000, guid: a586769b18f1549008115e8319760513, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef15570024b643b988a87289243f28c, type: 3}
+  m_Name: CatFood
+  m_EditorClassIdentifier: 
+  foodToSpawn: {fileID: 1195728146808060703, guid: 3321a885e2a28408cbbabf0ca4207762,
+    type: 3}
+  foodName: Cat food
+  foodSprite: {fileID: 21300000, guid: 1905cbfac0c46435e9bfebe50dc3e684, type: 3}
+  animalType: 0
