@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f20acfd07d446d48e1631e7b033df6, type: 3}
+  m_Name: PigData
+  m_EditorClassIdentifier: 
+  animalToSpawn: {fileID: 5539508501703848937, guid: 4774469b4b7b5405b9c6927ca15d1075,
+    type: 3}
+  animalName: Pig
+  animalSprite: {fileID: 21300000, guid: 2ac0c1627c08046b8ae1004ab7504554, type: 3}
+  animalType: 2
+  spawnClips:
+  - {fileID: 8300000, guid: f0916b034e0d040b1892ba5f9b73766e, type: 3}
+  - {fileID: 8300000, guid: e31130cd9b64b408c9357f922814c104, type: 3}
+  - {fileID: 8300000, guid: 93322646055c4471c9a5834efd403033, type: 3}
+  - {fileID: 8300000, guid: 81685c94fe68745e9aec890e621a6fb4, type: 3}
+  eatHappyClips:
+  - {fileID: 8300000, guid: ef7a6d738b471405685bb122fa044ec3, type: 3}
+  - {fileID: 8300000, guid: f85552d83cd5c4e7bb5549890b84f028, type: 3}
+  - {fileID: 8300000, guid: 2a5f0b36fa304473b87dd973b84bc1aa, type: 3}
+  - {fileID: 8300000, guid: b1c713285786b4b2e9e214512ff03a95, type: 3}
+  eatMiddleClips: []
+  skipFoodClips: []

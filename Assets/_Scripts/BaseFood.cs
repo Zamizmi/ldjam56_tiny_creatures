@@ -8,10 +8,15 @@ public class BaseFood : MonoBehaviour
     [SerializeField] private float reducesHunger;
     [SerializeField] private bool isActive;
 
+    private void Start()
+    {
+        SoundManager.Instance.PlaySpawnFoodSound(transform.position);
+    }
+
     public float Eat(AnimalBehaviour animal)
     {
         isActive = true;
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, animal.GetTimeToEat());
         if (animalType == animal.animalType) return reducesHunger;
         return reducesHunger / 2;
     }

@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f20acfd07d446d48e1631e7b033df6, type: 3}
   m_Name: CatData
   m_EditorClassIdentifier: 
-  animalToSpawn: {fileID: 1663585627317157144, guid: cd617e52669e44f7ebff5b2c398a4900,
+  animalToSpawn: {fileID: 1663585627317157144, guid: 46671c56d7ca64efbbdab5492b58b9ca,
     type: 3}
   animalName: Cat
-  animalSprite: {fileID: 21300000, guid: 169787e0348394ac99a56bfec8dc4211, type: 3}
+  animalSprite: {fileID: 21300000, guid: 39fa623375b2b4f36b3056e8987a063a, type: 3}
   animalType: 0
+  spawnClips:
+  - {fileID: 8300000, guid: ec2241ee1614a43f8bf250d32078baaf, type: 3}
+  - {fileID: 8300000, guid: e6b82426108f841e2b15f213464bf488, type: 3}
+  - {fileID: 8300000, guid: feb9906c4866640558a2465975430492, type: 3}
+  eatHappyClips:
+  - {fileID: 8300000, guid: 59908ce9e45f14be19e3be32ca35350d, type: 3}
+  - {fileID: 8300000, guid: bcfd71d4baed142228afde9bdf5484b0, type: 3}
+  - {fileID: 8300000, guid: f445ec56493fa40479b2aa4635deb23d, type: 3}
+  eatMiddleClips:
+  - {fileID: 8300000, guid: 9a29fe31721744f2ba1737a10d30cd53, type: 3}
+  - {fileID: 8300000, guid: 34357d5ba1f154b9383e20f1c524d56b, type: 3}
+  - {fileID: 8300000, guid: b35384337196c433183b5f8cafc41bdc, type: 3}
+  skipFoodClips:
+  - {fileID: 8300000, guid: 635c14d9f09a14a60a727abec60914fb, type: 3}
+  - {fileID: 8300000, guid: a74cba5206af14a0c87e1f1bb50138b9, type: 3}
+  - {fileID: 8300000, guid: 7ab6efb2aadd74e838dcea1edf987031, type: 3}

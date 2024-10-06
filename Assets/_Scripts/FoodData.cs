@@ -6,6 +6,7 @@ public class FoodData : MonoBehaviour
 {
     [SerializeField] public int currentAmount;
     [SerializeField] public FoodSO foodSO;
+    [SerializeField] public bool isActive;
 
     public void SpawnFood(Vector3 position, Transform parent)
     {
@@ -18,5 +19,15 @@ public class FoodData : MonoBehaviour
     {
         foodSO = newFoodSO;
         currentAmount = amount;
+    }
+
+    public void SetActive()
+    {
+        isActive = true;
+    }
+
+    public void SetNotActive()
+    {
+        isActive = false;
     }
 }

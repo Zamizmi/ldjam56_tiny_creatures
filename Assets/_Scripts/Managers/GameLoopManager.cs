@@ -45,11 +45,30 @@ public class GameLoopManager : MonoBehaviour
         return allLevels[activeLevelIndex];
     }
 
+    public void RestartLevel()
+    {
+        StartSetup();
+    }
+
     private void OnWaveCompletedHandler(object sender, EventArgs e)
     {
         activeLevelIndex++;
-        // Add check to Win game!
+        if (activeLevelIndex >= allLevels.Length)
+        {
+            activeState = GameStates.GAME_WON;
+            return;
+        }
         StartSetup();
+    }
+
+    public void GameLost()
+    {
+        SoundManager.Instance.PlayGameOverSound();
+        activeState = GameStates.GAME_OVER;
+        OnStateChanged?.Invoke(this, new OnStateChangedArgs
+        {
+            activeLevelSO = allLevels[activeLevelIndex]
+        });
     }
 
     public void StartSetup()
@@ -70,9 +89,13 @@ public class GameLoopManager : MonoBehaviour
         });
     }
 
-
     public GameStates GetActiveState()
     {
         return activeState;
+    }
+
+    public bool ActionsAllowed()
+    {
+        return activeState == GameStates.SETUP || activeState == GameStates.GAME_ACTIVE;
     }
 }

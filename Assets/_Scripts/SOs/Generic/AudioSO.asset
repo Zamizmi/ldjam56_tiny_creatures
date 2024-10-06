@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb2d08a224564ea5b0d115a2a3c0f0e, type: 3}
+  m_Name: AudioSO
+  m_EditorClassIdentifier: 
+  victory: {fileID: 8300000, guid: fed1339cdfc5e4ee9aba9d14b1489810, type: 3}
+  gameLost: {fileID: 8300000, guid: b76fa99eff8c44fa1aae973b827c7042, type: 3}
+  placeFood:
+  - {fileID: 8300000, guid: 4704ddf2f07434ac9a71b71539d63dde, type: 3}
+  - {fileID: 8300000, guid: 0d3e5c93a304e45ccb81812299994d78, type: 3}
+  - {fileID: 8300000, guid: 5452a71a0c84a462eabfda8b265c6928, type: 3}
+  - {fileID: 8300000, guid: a6a7ce74326254d0db81a9a40623cc4e, type: 3}
+  - {fileID: 8300000, guid: 7894bc497759c49fd8b400ed3cb1c4ae, type: 3}
+  - {fileID: 8300000, guid: f3001db8eafb848ee9b827918f4d811b, type: 3}
+  menuHover:
+  - {fileID: 8300000, guid: 6e831a298a69f441aa953bbe2df8ea97, type: 3}
+  - {fileID: 8300000, guid: a03255b4400ac4e25a5cabc27c3f6eac, type: 3}
+  - {fileID: 8300000, guid: d41df7afa7cc147e1bbf40cd205c6b9a, type: 3}
+  - {fileID: 8300000, guid: b7bdaaa80581d4946a1e3d53bb9c1bef, type: 3}
+  - {fileID: 8300000, guid: 28fe0424b45c84b2bb3fa6e8ff361297, type: 3}
+  soundtrack: {fileID: 8300000, guid: 10466c956d28e4e459c69ead29a2c688, type: 3}

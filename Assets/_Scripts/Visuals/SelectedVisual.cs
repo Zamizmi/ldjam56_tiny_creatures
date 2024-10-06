@@ -10,7 +10,11 @@ public class SelectedVisual : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!basePlatform.HasFood()) Show();
+        if (!GameLoopManager.Instance.ActionsAllowed()) return;
+        if (!basePlatform.HasFood())
+        {
+            Show();
+        }
     }
     private void OnMouseExit()
     {

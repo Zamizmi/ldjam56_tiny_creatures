@@ -14,4 +14,13 @@ public class Goal : MonoBehaviour
     {
         Instance = this;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out AnimalBehaviour animal))
+        {
+            GameLoopManager.Instance.GameLost();
+        }
+    }
+
 }

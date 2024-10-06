@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0c1d0bd98a847ba833dd9f2c646b6e, type: 3}
+  m_Name: Level6PigFood
+  m_EditorClassIdentifier: 
+  levelRelated: {fileID: 11400000, guid: 81c6a1abb89484e8fb16f5bfb37116fe, type: 2}
+  foodSO: {fileID: 11400000, guid: e9b7dd3454c934c38824b7db4f863af5, type: 2}
+  totalFoodAmount: 6

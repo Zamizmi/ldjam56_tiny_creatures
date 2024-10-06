@@ -87,8 +87,10 @@ GameObject:
   - component: {fileID: 8789192561884842443}
   - component: {fileID: 7299234051491738862}
   - component: {fileID: 5850832842049533444}
-  - component: {fileID: 284107077312422837}
   - component: {fileID: 7855519599473518579}
+  - component: {fileID: 6137669741272923667}
+  - component: {fileID: 2931333848924060762}
+  - component: {fileID: 1880856014217750078}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -134,8 +136,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1663585627317157144}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2
+  m_Radius: 0.1
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -146,7 +148,7 @@ NavMeshAgent:
   m_Height: 1
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!135 &5850832842049533444
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -168,7 +170,69 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &284107077312422837
+--- !u!114 &7855519599473518579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663585627317157144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a796a36805466442289cde61306792b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalType: 1
+  agent: {fileID: 0}
+  hungryAmount: 10
+  foodToEat: {fileID: 0}
+  isEating: 0
+  timeToEat: 3
+  eatingTimer: 0
+  animalVisual: {fileID: 0}
+  animalSO: {fileID: 11400000, guid: dee79de62950345c8a1a0f1238f7e931, type: 2}
+--- !u!95 &6137669741272923667
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663585627317157144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 729a66e33ba874728a1cfa21847bb0f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2931333848924060762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663585627317157144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc340d45dc9c4905bdb86057f64e9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4323977726420966819}
+  idleSprite: {fileID: 21300000, guid: b4afd61cb0ed84d25be0f463b73d2913, type: 3}
+  eatSprite: {fileID: 21300000, guid: b832cc5049ce7411dab874d630e5b580, type: 3}
+  sleepSprite: {fileID: 21300000, guid: 82dc9ac611c2c48308ce822943fe9cad, type: 3}
+  happyIcons: {fileID: 3929552366595625169, guid: 684aaff9283394e6187c56065c5e3d4e,
+    type: 3}
+  middleIcons: {fileID: 3929552366595625169, guid: 684aaff9283394e6187c56065c5e3d4e,
+    type: 3}
+--- !u!54 &1880856014217750078
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,29 +255,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7855519599473518579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663585627317157144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a796a36805466442289cde61306792b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalType: 1
-  agent: {fileID: 0}
-  hungryAmount: 10
-  foodToEat: {fileID: 0}
-  isEating: 0
-  timeToEat: 2
-  eatingTimer: 0
 --- !u!1 &7205932121756727920
 GameObject:
   m_ObjectHideFlags: 0

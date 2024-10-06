@@ -23,6 +23,12 @@ PrefabInstance:
       propertyPath: animalType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7367224350491671498, guid: 3321a885e2a28408cbbabf0ca4207762,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3280a75d334164b5e96c6b6af641b094,
+        type: 3}
     - target: {fileID: 9124221401241306225, guid: 3321a885e2a28408cbbabf0ca4207762,
         type: 3}
       propertyPath: m_LocalPosition.x

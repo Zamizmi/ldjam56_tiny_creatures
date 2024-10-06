@@ -58,6 +58,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1318306880911629164, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cad2c05e73c5340bb9191582b70337cc, type: 2}
     - target: {fileID: 1663585627317157144, guid: cd617e52669e44f7ebff5b2c398a4900,
         type: 3}
       propertyPath: m_Name
@@ -67,12 +72,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 689190eb5cd20467ba8bef4b5e742e39,
+      objectReference: {fileID: 21300000, guid: c884f86a8c74041dcb4c36ec6cb55400,
         type: 3}
+    - target: {fileID: 7299234051491738862, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: m_Speed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299234051491738862, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299234051491738862, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299234051491738862, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7855519599473518579, guid: cd617e52669e44f7ebff5b2c398a4900,
         type: 3}
       propertyPath: timeToEat
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7855519599473518579, guid: cd617e52669e44f7ebff5b2c398a4900,
         type: 3}
@@ -84,8 +109,43 @@ PrefabInstance:
       propertyPath: hungryAmount
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7877296510392259665, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 3587101430915810660}
+    - target: {fileID: 7877296510392259665, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: eatSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58ff5e071726248a6ac6b543f95b0ece,
+        type: 3}
+    - target: {fileID: 7877296510392259665, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c884f86a8c74041dcb4c36ec6cb55400,
+        type: 3}
+    - target: {fileID: 7877296510392259665, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
+      propertyPath: sleepSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f5df5a98f7794a89b01b2dd8de73859,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd617e52669e44f7ebff5b2c398a4900, type: 3}
+--- !u!114 &3587101430915810660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4323977726420966819, guid: cd617e52669e44f7ebff5b2c398a4900,
+    type: 3}
+  m_PrefabInstance: {fileID: 992528503004829895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

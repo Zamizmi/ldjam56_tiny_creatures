@@ -35,7 +35,7 @@ public class ActiveLevelFoodHUD : MonoBehaviour
         {
             Transform iconTransform = Instantiate(visualPrefab, transform);
             iconTransform.gameObject.SetActive(true);
-            iconTransform.GetComponent<SingleFoodUI>().SetFoodSO(food.foodSO, food.currentAmount);
+            iconTransform.GetComponent<SingleFoodUI>().SetFoodData(food);
         }
     }
 }

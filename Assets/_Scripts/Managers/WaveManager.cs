@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour, IHasProgress
@@ -29,6 +28,7 @@ public class WaveManager : MonoBehaviour, IHasProgress
     [SerializeField] private float timeBetweenSpawns = 2f;
     [SerializeField] private float spawnTimer = 0f;
     [SerializeField] private int fedAnimals = 0;
+    [SerializeField] private GenericAudioSO audios;
     private bool isSpawning;
 
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
@@ -98,8 +98,15 @@ public class WaveManager : MonoBehaviour, IHasProgress
         fedAnimals++;
         if (fedAnimals == waveContent.Length)
         {
-            OnWaveCompleted?.Invoke(this, EventArgs.Empty);
+            SoundManager.Instance.PlayVictorySound();
+            StartCoroutine(DelayedCompleted());
         }
+    }
+
+    private IEnumerator DelayedCompleted()
+    {
+        yield return new WaitForSeconds(2);
+        OnWaveCompleted?.Invoke(this, EventArgs.Empty);
     }
 
     private void Update()
@@ -112,7 +119,7 @@ public class WaveManager : MonoBehaviour, IHasProgress
                 isSpawning = false;
                 OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                 {
-                    progressNormalized = 0f
+                    progressNormalized = 1f
                 });
             }
 

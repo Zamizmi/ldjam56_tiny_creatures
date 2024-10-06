@@ -47,6 +47,7 @@ public class FoodSpawnManager : MonoBehaviour
 
     private void PrepareWave(LevelSO newLevel)
     {
+        ClearFoods();
         foreach (Transform child in transform)
         {
             if (child == foodDataPrefab) continue;
@@ -64,11 +65,24 @@ public class FoodSpawnManager : MonoBehaviour
         SetActiveFood(availableFoods[0].foodSO);
     }
 
+    private void ClearFoods()
+    {
+        BaseFood[] foods = FindObjectsOfType<BaseFood>();
+        for (int i = 0; i < foods.Length; i++)
+        {
+            Destroy(foods[i].gameObject);
+        }
+    }
+
     public void SetActiveFood(FoodSO newFood)
     {
         foreach (var item in allFoodData)
         {
-            if (item.foodSO == newFood) activeFoodToSpawn = item;
+            if (item.foodSO == newFood) { activeFoodToSpawn = item; item.SetActive(); }
+            else
+            {
+                item.SetNotActive();
+            };
         }
         OnFoodStatusChanged?.Invoke(this, new OnFoodStatusChangedEventArgs
         {

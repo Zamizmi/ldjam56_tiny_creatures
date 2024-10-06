@@ -10,4 +10,8 @@ public class AnimalSO : ScriptableObject
 
     public Sprite animalSprite;
     public AnimalBehaviour.AnimalType animalType;
+    public AudioClip[] spawnClips;
+    public AudioClip[] eatHappyClips;
+    public AudioClip[] eatMiddleClips;
+    public AudioClip[] skipFoodClips;
 }
