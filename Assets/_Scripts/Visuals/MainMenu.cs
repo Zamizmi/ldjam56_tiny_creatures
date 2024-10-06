@@ -16,9 +16,6 @@ public class MainMenu : MonoBehaviour
         });
     }
 
-    private void Start()
-    {
-    }
     private void Hide()
     {
         gameObject.SetActive(false);

@@ -25,7 +25,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4cfd54aa514b64741bf3ac7c9ce61a77, type: 3}
   - {fileID: 8300000, guid: 9249388aff37149bbac6f32ed19f92e6, type: 3}
   - {fileID: 8300000, guid: a78b709d714fe4ab09215093c2c3e550, type: 3}
-  eatMiddleClips: []
+  eatMiddleClips:
+  - {fileID: 8300000, guid: 436efb09ec10646e685e62146ff11800, type: 3}
+  - {fileID: 8300000, guid: cb693bfa7393044098f0fac831008b93, type: 3}
+  - {fileID: 8300000, guid: ce99005e0415142bc9e5cf0537da3eaa, type: 3}
   skipFoodClips:
   - {fileID: 8300000, guid: 436efb09ec10646e685e62146ff11800, type: 3}
   - {fileID: 8300000, guid: cb693bfa7393044098f0fac831008b93, type: 3}

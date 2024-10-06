@@ -56,6 +56,10 @@ public class GameLoopManager : MonoBehaviour
         if (activeLevelIndex >= allLevels.Length)
         {
             activeState = GameStates.GAME_WON;
+            OnStateChanged?.Invoke(this, new OnStateChangedArgs
+            {
+                activeLevelSO = allLevels[0]
+            });
             return;
         }
         StartSetup();

@@ -96,8 +96,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7855519599473518579, guid: cd617e52669e44f7ebff5b2c398a4900,
         type: 3}
+      propertyPath: animalSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b0d4dd86be47147338e91339a8366193,
+        type: 2}
+    - target: {fileID: 7855519599473518579, guid: cd617e52669e44f7ebff5b2c398a4900,
+        type: 3}
       propertyPath: timeToEat
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7855519599473518579, guid: cd617e52669e44f7ebff5b2c398a4900,
         type: 3}

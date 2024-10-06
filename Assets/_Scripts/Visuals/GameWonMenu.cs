@@ -2,24 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class RestartMenu : MonoBehaviour
+public class GameWonMenu : MonoBehaviour
 {
-
     [SerializeField] private Button restartLevelButton;
 
     private void Awake()
     {
         restartLevelButton.onClick.AddListener(() =>
         {
-            GameLoopManager.Instance.RestartLevel();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Hide();
         });
     }
     private void Start()
     {
-
         GameLoopManager.Instance.OnStateChanged += OnStateChangedHandler;
         Hide();
     }
@@ -29,11 +28,8 @@ public class RestartMenu : MonoBehaviour
         var latestState = GameLoopManager.Instance.GetActiveState();
         switch (latestState)
         {
-            case GameLoopManager.GameStates.GAME_OVER:
+            case GameLoopManager.GameStates.GAME_WON:
                 Show();
-                break;
-            default:
-                Hide();
                 break;
         }
     }

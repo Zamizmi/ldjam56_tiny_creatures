@@ -55,6 +55,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c764132f345384ad788b8d9d7a3e5611, type: 2}
   - {fileID: 11400000, guid: 5339879d5e3314abcb28dbf27d7e1b08, type: 2}
   - {fileID: 11400000, guid: 69e4e661e94c94231bed7414327b3df4, type: 2}
+  - {fileID: 11400000, guid: 81c6a1abb89484e8fb16f5bfb37116fe, type: 2}
   activeLevelIndex: 0
 --- !u!114 &572453460615940394
 MonoBehaviour:
@@ -79,9 +80,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d699cacc3419f429392c863db9398d5a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 10466c956d28e4e459c69ead29a2c688, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -262,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentAmount: 0
   foodSO: {fileID: 0}
+  isActive: 0
 --- !u!1 &5934563910812383231
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class SingleWaveAnimalUI : MonoBehaviour
 {
     [SerializeField] private AnimalSO animal;
     [SerializeField] private Image animalImage;
+    [SerializeField] private Image spawnedAnimal;
+    [SerializeField] private Image sleepImage;
 
     public void SetAnimalSO(AnimalSO animalSO)
     {

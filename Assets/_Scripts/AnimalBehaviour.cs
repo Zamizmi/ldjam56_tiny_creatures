@@ -13,11 +13,16 @@ public class AnimalBehaviour : MonoBehaviour
         PIG,
         COW,
     }
+    public enum FoodType
+    {
+        CARNIVORE,
+        HERBIVORE,
+        OMNIVORE,
+    }
     public EventHandler OnAnimalSatisfied;
     public AnimalType animalType;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float hungryAmount;
-    [SerializeField] private BaseFood foodToEat;
     [SerializeField] private bool isEating = false;
     [SerializeField] private float timeToEat;
     [SerializeField] private float eatingTimer;
@@ -42,7 +47,7 @@ public class AnimalBehaviour : MonoBehaviour
         {
             if (foodToEat.IsFree())
             {
-                StartEating(foodToEat.Eat(this));
+                StartEating(foodToEat);
             }
         };
     }
@@ -86,12 +91,15 @@ public class AnimalBehaviour : MonoBehaviour
         agent.SetDestination(Goal.Instance.transform.position);
     }
 
-    private void StartEating(float amount)
+    private void StartEating(BaseFood food)
     {
         isEating = true;
-        SoundManager.Instance.PlayRandomSound(animalSO.eatHappyClips, transform.position);
+        bool isHappy = food.IsMatchForAnimal(this);
+        float amount = food.Eat(this);
+        var clipsToPlay = isHappy ? animalSO.eatHappyClips : animalSO.eatMiddleClips;
+        SoundManager.Instance.PlayRandomSound(clipsToPlay, transform.position);
         animator.SetBool(isEatingStr, true);
-        animalVisual.SetEatMode();
+        animalVisual.SetEatMode(isHappy);
         hungryAmount -= amount;
         agent.enabled = false;
         if (!IsHungry()) { StartCoroutine(DelayedSleep()); }

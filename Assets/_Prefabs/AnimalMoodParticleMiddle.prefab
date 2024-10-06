@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 529623719962668309}
   - component: {fileID: 6591728523680587620}
   m_Layer: 0
-  m_Name: AnimalMoodParticle
+  m_Name: AnimalMoodParticleMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4777,7 +4777,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4af1c07b7c5dc4670929682be0064d4e, type: 2}
+  - {fileID: 2100000, guid: d4357d62739ee4fd18bfafaa88c5e125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

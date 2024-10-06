@@ -230,7 +230,7 @@ MonoBehaviour:
   sleepSprite: {fileID: 0}
   happyIcons: {fileID: 3929552366595625169, guid: 684aaff9283394e6187c56065c5e3d4e,
     type: 3}
-  middleIcons: {fileID: 3929552366595625169, guid: 684aaff9283394e6187c56065c5e3d4e,
+  middleIcons: {fileID: 3929552366595625169, guid: eef1c39c1be00419c8f0000e28b0d224,
     type: 3}
 --- !u!54 &-4643692088262841421
 Rigidbody:

@@ -185,9 +185,8 @@ MonoBehaviour:
   animalType: 0
   agent: {fileID: 0}
   hungryAmount: 10
-  foodToEat: {fileID: 0}
   isEating: 0
-  timeToEat: 4
+  timeToEat: 3
   eatingTimer: 0
   animalVisual: {fileID: 0}
   animalSO: {fileID: 11400000, guid: 8bc51c71d3b004e5481993423eb1761d, type: 2}
@@ -230,7 +229,7 @@ MonoBehaviour:
   sleepSprite: {fileID: 21300000, guid: fe0c12c44778e4240af5d3331d0a8cd9, type: 3}
   happyIcons: {fileID: 3929552366595625169, guid: 684aaff9283394e6187c56065c5e3d4e,
     type: 3}
-  middleIcons: {fileID: 3929552366595625169, guid: 684aaff9283394e6187c56065c5e3d4e,
+  middleIcons: {fileID: 3929552366595625169, guid: eef1c39c1be00419c8f0000e28b0d224,
     type: 3}
 --- !u!54 &-6725903381948343895
 Rigidbody:
