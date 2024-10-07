@@ -49,18 +49,38 @@ public class WaveManager : MonoBehaviour, IHasProgress
             case GameLoopManager.GameStates.GAME_ACTIVE:
                 StartWave();
                 break;
+            case GameLoopManager.GameStates.GAME_OVER:
+                HandleGameOver();
+                break;
         }
+    }
+
+    private void HandleGameOver()
+    {
+        ResetTimers();
+        isSpawning = false;
     }
 
     private void PrepareWave(LevelSO newLevel)
     {
         ClearAnimals();
-        activeIndex = 0;
+        ResetTimers();
+        isSpawning = false;
         waveContent = new AnimalSO[newLevel.animalsToSpawn.Length];
         waveContent = newLevel.animalsToSpawn;
         OnWavePrepared?.Invoke(this, new OnWaveStartedArgs
         {
             animalsToSpawn = waveContent
+        });
+    }
+
+    private void ResetTimers()
+    {
+        activeIndex = 0;
+        spawnTimer = 0f;
+        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+        {
+            progressNormalized = spawnTimer / timeBetweenSpawns
         });
     }
 
@@ -122,13 +142,12 @@ public class WaveManager : MonoBehaviour, IHasProgress
                     progressNormalized = 1f
                 });
             }
-
+            spawnTimer += Time.deltaTime;
             if (spawnTimer > timeBetweenSpawns)
             {
                 SpawnNext();
                 spawnTimer = 0f;
             }
-            spawnTimer += Time.deltaTime;
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
             {
                 progressNormalized = spawnTimer / timeBetweenSpawns
