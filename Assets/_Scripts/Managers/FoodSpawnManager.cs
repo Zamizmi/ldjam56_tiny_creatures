@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -103,6 +104,16 @@ public class FoodSpawnManager : MonoBehaviour
     public void SpawnInPosition(Vector3 position, Transform parent)
     {
         activeFoodToSpawn.SpawnFood(position, parent);
+        if (activeFoodToSpawn.currentAmount <= 0)
+        {
+            var anotherFoodWithAmount = allFoodData.FirstOrDefault((food) => food.currentAmount > 0);
+            if (anotherFoodWithAmount != null)
+            {
+                anotherFoodWithAmount.SetActive();
+                activeFoodToSpawn.SetNotActive();
+                activeFoodToSpawn = anotherFoodWithAmount;
+            };
+        }
         OnFoodStatusChanged?.Invoke(this, new OnFoodStatusChangedEventArgs
         {
             foods = allFoodData
